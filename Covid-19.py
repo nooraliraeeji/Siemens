@@ -17,6 +17,7 @@ data=data.sort_values(by='severity index')
 
 result=data[['Country','severity index']]
 result.to_excel("Table1.xlsx",index=False)
+print(result)
 #result.to_json("https://raw.githubusercontent.com/nooraliraeeji/Siemens/main/output/Table1.json",orient="table")
 
 
@@ -40,6 +41,6 @@ data2['Total Deaths/median_total_deaths']=data2['Total Deaths']/median_total_dea
 data2['Total Tests/std_total_tests']=data2['Total Tests']/std_total_tests
 
 result2=data2[['Country','Total recovered/whole_total_recovered','Total Deaths/median_total_deaths','Total Tests/std_total_tests']]
-
+print(result2)
 result2.to_excel("Table2.xlsx",index=False)
 
