@@ -44,6 +44,7 @@ data2['Total Deaths/median_total_deaths']=data2['Total Deaths']/median_total_dea
 data2['Total Tests/std_total_tests']=data2['Total Tests']/std_total_tests
 
 result2=data2[['Country','Total recovered/whole_total_recovered','Total Deaths/median_total_deaths','Total Tests/std_total_tests']]
-print(result2)
+# displaying the DataFrame
+print(tabulate(result2, headers = 'keys', tablefmt = 'github'))
 result2.to_excel("Table2.xlsx",index=False)
 
