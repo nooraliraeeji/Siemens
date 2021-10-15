@@ -16,7 +16,10 @@ data['severity index']=data['Rank Total Cases/1 mil population']*data['Rank Deat
 data=data.sort_values(by='severity index')
 
 result=data[['Country','severity index']]
-result.to_excel("https://raw.githubusercontent.com/nooraliraeeji/Siemens/main/output/Table1.xlsx",index=False,engine='xlsxwriter')
+# result.to_excel("https://raw.githubusercontent.com/nooraliraeeji/Siemens/main/output/Table1.xlsx",index=False,engine='xlsxwriter')
+with pd.ExcelWriter('https://raw.githubusercontent.com/nooraliraeeji/Siemens/main/output/Table1.xlsx',
+                    mode='a') as writer:  
+    df.to_excel(writer, index=False,engine='xlsxwriter')
 
 
 # ## Handling Missing value 
