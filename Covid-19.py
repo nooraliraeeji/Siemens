@@ -3,6 +3,7 @@
 import pandas as pd
 import numpy as np
 import statistics
+from tabulate import tabulate
 
 # Reading the downloaded content and turning it into a pandas dataframe
 data=pd.read_csv("https://raw.githubusercontent.com/nooraliraeeji/Siemens/main/input/covid_africa.csv")
@@ -17,7 +18,9 @@ data=data.sort_values(by='severity index')
 
 result=data[['Country','severity index']]
 result.to_excel("Table1.xlsx",index=False)
-print(result)
+# displaying the DataFrame
+print(tabulate(result, headers = 'keys', tablefmt = 'psql'))
+
 #result.to_json("https://raw.githubusercontent.com/nooraliraeeji/Siemens/main/output/Table1.json",orient="table")
 
 
