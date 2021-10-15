@@ -16,7 +16,7 @@ data['severity index']=data['Rank Total Cases/1 mil population']*data['Rank Deat
 data=data.sort_values(by='severity index')
 
 result=data[['Country','severity index']]
-result.to_excel("https://raw.githubusercontent.com/nooraliraeeji/Siemens/main/output/Table1.xlsx",index=False)
+result.to_excel("https://raw.githubusercontent.com/nooraliraeeji/Siemens/main/output/Table1.xlsx",index=False,engine='xlsxwriter')
 
 
 # ## Handling Missing value 
@@ -40,5 +40,5 @@ data2['Total Tests/std_total_tests']=data2['Total Tests']/std_total_tests
 
 result2=data2[['Country','Total recovered/whole_total_recovered','Total Deaths/median_total_deaths','Total Tests/std_total_tests']]
 
-result2.to_excel("https://raw.githubusercontent.com/nooraliraeeji/Siemens/main/output/Table2.xlsx",index=False)
+result2.to_excel("https://raw.githubusercontent.com/nooraliraeeji/Siemens/main/output/Table2.xlsx",index=False,engine='xlsxwriter')
 
