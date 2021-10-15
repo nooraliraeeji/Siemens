@@ -3,8 +3,6 @@
 import pandas as pd
 import numpy as np
 import statistics
-import requests
-import io
 
 # Reading the downloaded content and turning it into a pandas dataframe
 data=pd.read_csv("https://raw.githubusercontent.com/nooraliraeeji/Siemens/main/input/covid_africa.csv")
