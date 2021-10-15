@@ -17,7 +17,7 @@ data=data.sort_values(by='severity index')
 
 result=data[['Country','severity index']]
 # result.to_excel("https://raw.githubusercontent.com/nooraliraeeji/Siemens/main/output/Table1.xlsx",index=False,engine='xlsxwriter')
-with pd.ExcelWriter('https://raw.githubusercontent.com/nooraliraeeji/Siemens/main/output/Table1.xlsx',
+with pd.ExcelWriter('https://raw.githubusercontent.com/nooraliraeeji/Siemens/main/output/Table1.xlsx',engine="openpyxl",
                     mode='a') as writer:  
     result.to_excel(writer, index=False)
 
