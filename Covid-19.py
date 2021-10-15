@@ -19,7 +19,7 @@ data=data.sort_values(by='severity index')
 result=data[['Country','severity index']]
 result.to_excel("Table1.xlsx",index=False)
 # displaying the DataFrame
-print(tabulate(result, headers = 'keys', tablefmt = 'psql'))
+print(tabulate(result, headers = 'keys', tablefmt = 'github'))
 
 #result.to_json("https://raw.githubusercontent.com/nooraliraeeji/Siemens/main/output/Table1.json",orient="table")
 
