@@ -21,7 +21,7 @@ result.to_excel("Table1.xlsx",index=False)
 # displaying the DataFrame
 print(tabulate(result, headers = 'keys', tablefmt = 'github'))
 
-#result.to_json("https://raw.githubusercontent.com/nooraliraeeji/Siemens/main/output/Table1.json",orient="table")
+result.to_excel("https://raw.githubusercontent.com/nooraliraeeji/Siemens/main/output/Table1.xlsx",index=False)
 
 
 # ## Handling Missing value 
@@ -46,5 +46,5 @@ data2['Total Tests/std_total_tests']=data2['Total Tests']/std_total_tests
 result2=data2[['Country','Total recovered/whole_total_recovered','Total Deaths/median_total_deaths','Total Tests/std_total_tests']]
 # displaying the DataFrame
 print(tabulate(result2, headers = 'keys', tablefmt = 'github'))
-result2.to_excel("Table2.xlsx",index=False)
+result2.to_excel("https://raw.githubusercontent.com/nooraliraeeji/Siemens/main/output/Table2.xlsx",index=False)
 
